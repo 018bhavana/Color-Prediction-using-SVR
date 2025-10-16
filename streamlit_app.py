@@ -51,7 +51,7 @@ db_ref = init_firebase()
 def load_model_and_scaler():
     try:
         model = joblib.load("svr_ph_model.pkl")
-        scaler = joblib.load("scaler_nb.pkl")
+        scaler = joblib.load("scaler.pkl")
         return model, scaler
     except Exception as e:
         st.error(f"Error loading model/scaler files: {e}")
