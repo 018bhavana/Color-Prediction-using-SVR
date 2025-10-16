@@ -50,7 +50,7 @@ db_ref = init_firebase()
 @st.cache_resource
 def load_model_and_scaler():
     try:
-        model = joblib.load("gaussian_nb.pkl")
+        model = joblib.load("svr_ph_model.pkl")
         scaler = joblib.load("scaler_nb.pkl")
         return model, scaler
     except Exception as e:
