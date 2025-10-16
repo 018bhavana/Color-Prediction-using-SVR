@@ -98,6 +98,12 @@ else:
     with col2:
         st.subheader("Live Chromaticity Diagram")
         plot_placeholder = st.empty()
+    try:
+        db_ref.child("test").set({"status": "ok"})
+        st.success("Firebase write successful!")
+    except Exception as e:
+        st.error(f"Firebase write failed: {e}")
+
 
     # --- MAIN LIVE LOOP ---
     while True:
